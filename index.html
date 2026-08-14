@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,14 +15,17 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2500673080381726');
-fbq('track', 'PageView');
+
+fbq('init','2500673080381726');
+fbq('track','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2500673080381726&ev=PageView&noscript=1"
-/></noscript>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2500673080381726&ev=PageView&noscript=1">
+</noscript>
 <!-- End Meta Pixel Code -->
 
 <style>
@@ -86,6 +88,8 @@ body::before{
     }
 }
 
+/* CONTAINER */
+
 .container{
     width:100%;
     max-width:430px;
@@ -140,7 +144,7 @@ h1{
     font-size:16px;
 }
 
-/* JOIN BUTTON */
+/* JOIN / SUBSCRIBE BUTTON */
 
 .join{
     display:block;
@@ -307,16 +311,16 @@ h1{
         Your Premium Prediction Destination 👑
     </p>
 
-    <!-- TELEGRAM JOIN BUTTON -->
-    <!-- Opens Telegram in a new tab -->
+    <!-- TELEGRAM SUBSCRIBE / JOIN BUTTON -->
 
     <a
         class="join"
         href="https://t.me/+GgRBBtemzO00MDQ1"
         target="_blank"
         rel="noopener noreferrer"
+        onclick="fbq('track','Lead');"
     >
-        🚀 JOIN NOW 🚀
+        🚀 SUBSCRIBE NOW 🚀
     </a>
 
     <!-- TIMER -->
@@ -421,5 +425,3 @@ setTimeout(() => {
 
 </body>
 </html>
-```
-

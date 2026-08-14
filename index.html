@@ -1,208 +1,307 @@
+# Final Cleaned HTML
+
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>𝙑𝙄𝙑𝙀𝙆 𝘽𝙃𝘼𝙄 𝙊𝙉 𝙏𝙊𝙋 𝟎𝟔</title>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+{
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod ?
+n.callMethod.apply(n,arguments) :
+n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}
+(window, document, 'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1572383104356625');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
+
+<noscript>
+<img
+height="1"
+width="1"
+style="display:none"
 src="https://www.facebook.com/tr?id=1572383104356625&ev=PageView&noscript=1"
-/></noscript>
+alt=""
+>
+</noscript>
 <!-- End Meta Pixel Code -->
+
 <style>
 
 *{
-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#000;
-color:#fff;
-text-align:center;
-overflow-x:hidden;
-position:relative;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#000;
+    color:#fff;
+    text-align:center;
+    overflow-x:hidden;
+    position:relative;
+    min-height:100vh;
 }
 
 /* STAR + RED GLOW BACKGROUND */
 
-body:before{
-content:"";
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at 50% 20%,rgba(255,0,0,.25),transparent 35%),
-radial-gradient(circle,rgba(255,0,0,.10),transparent 45%),
-url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cg fill='white'%3E%3Ccircle cx='20' cy='30' r='1'/%3E%3Ccircle cx='90' cy='70' r='1.5'/%3E%3Ccircle cx='160' cy='40' r='1'/%3E%3Ccircle cx='120' cy='150' r='1'/%3E%3Ccircle cx='40' cy='170' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
 
-background-size:
-100%,
-100%,
-200px 200px;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,0,0,.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle,
+            rgba(255,0,0,.10),
+            transparent 45%
+        ),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cg fill='white'%3E%3Ccircle cx='20' cy='30' r='1'/%3E%3Ccircle cx='90' cy='70' r='1.5'/%3E%3Ccircle cx='160' cy='40' r='1'/%3E%3Ccircle cx='120' cy='150' r='1'/%3E%3Ccircle cx='40' cy='170' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
 
-animation:space 10s infinite alternate;
-z-index:-1;
+    background-size:
+        100%,
+        100%,
+        200px 200px;
+
+    animation:space 10s infinite alternate;
+    z-index:-1;
 }
 
 @keyframes space{
-from{
-transform:scale(1);
-}
-to{
-transform:scale(1.15);
-}
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.15);
+    }
 }
 
 .container{
-width:100%;
-max-width:430px;
-margin:auto;
-padding:20px;
+    width:100%;
+    max-width:430px;
+    margin:auto;
+    padding:20px;
 }
 
-/* IMAGE BLUE GLOW */
+/* PROFILE IMAGE */
 
 .logo{
-width:150px;
-height:150px;
-border-radius:50%;
-object-fit:cover;
-border:3px solid #008cff;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
 
-box-shadow:
-0 0 20px #008cff,
-0 0 50px #008cff;
+    border:3px solid #008cff;
 
-animation:blue 3s infinite alternate;
+    box-shadow:
+        0 0 20px #008cff,
+        0 0 50px #008cff;
+
+    animation:blue 3s infinite alternate;
 }
 
 @keyframes blue{
-from{
-box-shadow:
-0 0 20px #008cff;
-}
-to{
-box-shadow:
-0 0 70px #00bfff;
-}
+
+    from{
+        box-shadow:
+            0 0 20px #008cff;
+    }
+
+    to{
+        box-shadow:
+            0 0 70px #00bfff;
+    }
 }
 
+/* TITLE */
+
 h1{
-font-size:32px;
-margin:15px 0;
-text-shadow:
-0 0 20px red;
+    font-size:32px;
+    margin:15px 0;
+
+    text-shadow:
+        0 0 20px red;
+}
+
+/* SUBTITLE */
+
+.subtitle{
+    margin:10px 0 20px;
+    font-size:16px;
 }
 
 /* JOIN BUTTON */
 
 .join{
-display:block;
-padding:18px;
-border-radius:18px;
+    display:block;
+    padding:18px;
 
-background:#ffcc00;
-color:#000;
+    border-radius:18px;
 
-font-size:26px;
-font-weight:bold;
-text-decoration:none;
+    background:#ffcc00;
+    color:#000;
 
-box-shadow:
-0 0 20px #ffcc00;
+    font-size:26px;
+    font-weight:bold;
+    text-decoration:none;
 
-animation:yellow 2s infinite alternate;
+    box-shadow:
+        0 0 20px #ffcc00;
+
+    animation:yellow 2s infinite alternate;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.join:hover{
+    transform:scale(1.03);
+
+    box-shadow:
+        0 0 35px #ffe680,
+        0 0 70px #ffcc00;
+}
+
+.join:active{
+    transform:scale(.97);
 }
 
 @keyframes yellow{
-from{
-box-shadow:
-0 0 15px #ffcc00;
+
+    from{
+        box-shadow:
+            0 0 15px #ffcc00;
+    }
+
+    to{
+        box-shadow:
+            0 0 50px #ffe680,
+            0 0 80px #ffcc00;
+    }
 }
-to{
-box-shadow:
-0 0 50px #ffe680,
-0 0 80px #ffcc00;
-}
-}
+
+/* CARD */
 
 .card{
-background:rgba(0,0,0,.85);
-border:1px solid #222;
-border-radius:20px;
-padding:18px;
-margin:18px 0;
+    background:rgba(0,0,0,.85);
+
+    border:1px solid #222;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    margin:18px 0;
+
+    box-shadow:
+        0 0 15px rgba(255,0,0,.12);
 }
+
+/* TIMER */
 
 #timer{
-font-size:50px;
-color:#fff;
-font-weight:bold;
+    font-size:50px;
+    color:#fff;
+    font-weight:bold;
+    margin:8px 0;
 }
 
+/* STATS */
+
 .stats{
-display:flex;
-gap:5px;
+    display:flex;
+    gap:5px;
 }
 
 .stats div{
-flex:1;
+    flex:1;
 }
 
+.stats h2{
+    margin:5px 0;
+}
+
+/* SMALL TEXT */
+
 .small{
-color:#aaa;
-font-size:14px;
+    color:#aaa;
+    font-size:14px;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:20px;
+    padding-bottom:10px;
 }
 
 /* MOBILE */
 
 @media(max-width:480px){
 
-.container{
-padding:15px;
-}
+    .container{
+        padding:15px;
+    }
 
-.logo{
-width:125px;
-height:125px;
-}
+    .logo{
+        width:125px;
+        height:125px;
+    }
 
-h1{
-font-size:27px;
-}
+    h1{
+        font-size:27px;
+    }
 
-.join{
-font-size:22px;
-padding:16px;
-}
+    .join{
+        font-size:22px;
+        padding:16px;
+    }
 
-#timer{
-font-size:42px;
-}
+    #timer{
+        font-size:42px;
+    }
 
-.stats h2{
-font-size:22px;
-}
+    .stats h2{
+        font-size:22px;
+    }
 
-.card{
-padding:15px;
-}
-
+    .card{
+        padding:15px;
+    }
 }
 
 </style>
@@ -213,99 +312,131 @@ padding:15px;
 
 <div class="container">
 
-<img
-class="logo"
-src="https://i.ibb.co/Kj8d1rhy/Whats-App-Image-2026-08-13-at-10-57-48-PM.jpg"
-alt="Vivek Bhai On Top 06"
->
+    <!-- PROFILE IMAGE -->
 
-<h1>
-𝙑𝙄𝙑𝙀𝙆 𝘽𝙃𝘼𝙄 𝙊𝙉 𝙏𝙊𝙋 𝟎𝟔
-</h1>
+    <img
+        class="logo"
+        src="https://i.ibb.co/Kj8d1rhy/Whats-App-Image-2026-08-13-at-10-57-48-PM.jpg"
+        alt="Vivek Bhai On Top 06"
+    >
 
-<p>
-Your Premium Prediction Destination 👑
-</p>
+    <!-- TITLE -->
 
-<a
-class="join"
-href="https://t.me/+GgRBBtemzO00MDQ1"
-target="_blank"
->
-🚀 JOIN NOW 🚀
-</a>
+    <h1>
+        𝙑𝙄𝙑𝙀𝙆 𝘽𝙃𝘼𝙄 𝙊𝙉 𝙏𝙊𝙋 𝟎𝟔
+    </h1>
 
-<div class="card">
+    <p class="subtitle">
+        Your Premium Prediction Destination 👑
+    </p>
 
-TIME LEFT FOR FREE JOIN
+    <!-- TELEGRAM JOIN BUTTON -->
+    <!-- Opens Telegram in a new tab -->
 
-<div id="timer">
-01:00
-</div>
+    <a
+        class="join"
+        href="https://t.me/+GgRBBtemzO00MDQ1"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        🚀 JOIN NOW 🚀
+    </a>
 
-<div class="small">
-Register before timer ends.
-</div>
+    <!-- TIMER -->
 
-</div>
+    <div class="card">
 
-<div class="card stats">
+        TIME LEFT FOR FREE JOIN
 
-<div>
-<h2>50K+</h2>
-<div class="small">
-MEMBERS
-</div>
-</div>
+        <div id="timer">
+            01:00
+        </div>
 
-<div>
-<h2>24/7</h2>
-<div class="small">
-SUPPORT
-</div>
-</div>
+        <div class="small">
+            Register before timer ends.
+        </div>
 
-<div>
-<h2>100%</h2>
-<div class="small">
-SECURE
-</div>
-</div>
+    </div>
 
-</div>
+    <!-- STATS -->
 
-<p class="small">
+    <div class="card stats">
 
-©2026 All rights reserved.
+        <div>
+            <h2>50K+</h2>
+            <div class="small">
+                MEMBERS
+            </div>
+        </div>
 
-<br>
+        <div>
+            <h2>24/7</h2>
+            <div class="small">
+                SUPPORT
+            </div>
+        </div>
 
-Ads Managed By <b>@ROJIEADS</b>
+        <div>
+            <h2>100%</h2>
+            <div class="small">
+                SECURE
+            </div>
+        </div>
 
-</p>
+    </div>
+
+    <!-- FOOTER -->
+
+    <p class="small footer">
+
+        ©2026 All rights reserved.
+
+        <br>
+
+        Ads Managed By <b>@ROJIEADS</b>
+
+    </p>
 
 </div>
 
 <script>
 
-let t=60;
+/* 60 SECOND TIMER */
 
-setInterval(()=>{
+let t = 60;
 
-let m=("0"+Math.floor(t/60)).slice(-2);
-let s=("0"+(t%60)).slice(-2);
+const timer = document.getElementById("timer");
 
-document.getElementById("timer").innerHTML=m+":"+s;
+const countdown = setInterval(() => {
 
-if(t>0)t--;
+    let minutes = Math.floor(t / 60);
+    let seconds = t % 60;
+
+    let m = String(minutes).padStart(2,"0");
+    let s = String(seconds).padStart(2,"0");
+
+    timer.textContent = m + ":" + s;
+
+    if(t <= 0){
+
+        clearInterval(countdown);
+
+        timer.textContent = "00:00";
+
+    }else{
+
+        t--;
+
+    }
 
 },1000);
 
-// AUTO REFRESH 60 SEC
 
-setTimeout(()=>{
+/* AUTO REFRESH AFTER 60 SECONDS */
 
-location.reload();
+setTimeout(() => {
+
+    location.reload();
 
 },60000);
 
@@ -313,3 +444,5 @@ location.reload();
 
 </body>
 </html>
+```
+

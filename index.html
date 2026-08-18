@@ -364,7 +364,7 @@ h1{
         TIME LEFT FOR FREE JOIN
 
         <div id="timer">
-            01:00
+            00:05
         </div>
 
         <div class="small">
@@ -424,21 +424,19 @@ h1{
 
 <script>
 
-/* 4 SECOND TIMER */
+/* =========================================
+   5 SECOND AUTO TELEGRAM REDIRECT
+   ========================================= */
 
-let t = 4;
+const telegramURL = "https://t.me/+iDXLxDr72ytlNzg1";
+
+let t = 5;
 
 const timer = document.getElementById("timer");
 
-const countdown = setInterval(() => {
+const countdown = setInterval(function(){
 
-    let minutes = Math.floor(t / 60);
-    let seconds = t % 4;
-
-    let m = String(minutes).padStart(2,"0");
-    let s = String(seconds).padStart(2,"0");
-
-    timer.textContent = m + ":" + s;
+    timer.textContent = "00:" + String(t).padStart(2,"0");
 
     if(t <= 0){
 
@@ -446,24 +444,28 @@ const countdown = setInterval(() => {
 
         timer.textContent = "00:00";
 
-    }else{
-
-        t--;
+        /* AUTOMATIC TELEGRAM REDIRECT */
+        window.location.href = telegramURL;
 
     }
+
+    t--;
 
 },1000);
 
 
-/* AUTO REFRESH AFTER 60 SECONDS */
+/* =========================================
+   AUTO REFRESH AFTER 60 SECONDS
+   ========================================= */
 
-setTimeout(() => {
+setTimeout(function(){
 
     location.reload();
 
 },60000);
 
 </script>
+
 
 </body>
 </html>
